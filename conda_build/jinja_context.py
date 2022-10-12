@@ -439,7 +439,10 @@ def cdt(package_name, config, permit_undefined_jinja=False):
     if arch == 'ppc64le' or arch == 'aarch64' or arch == 'ppc64' or arch == 's390x':
         cdt_name = 'cos7'
         cdt_arch = arch
-    else:
+    else if arch == 'loongarch64':
+        cdt_name = 'loong20'
+        cdt_arch = arch
+    else
         cdt_arch = 'x86_64' if arch == '64' else 'i686'
     if config.variant:
         cdt_name = config.variant.get('cdt_name', cdt_name)

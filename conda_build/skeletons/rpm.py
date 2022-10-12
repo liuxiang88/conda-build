@@ -137,6 +137,19 @@ CDTs = dict({'centos5': {'dirname': 'centos5',
                        'checksummer_name': "sha256",
                        'macros': {'pyver': '2.7.5',
                                   'gdk_pixbuf_base_version': '2.36.2'}},
+            'loongnix-20': {'dirname': 'loongnix-20',
+                       'short_name': 'loong20',
+                       'base_url': 'http://pkg.loongnix.cn/loongnix-server/8.4/BaseOS/loongarch64/release/Packages/',  # noqa
+                       'sbase_url': 'http://pkg.loongnix.cn/loongnix-server/8.4/BaseOS/Source/SPackages/', # noqa
+                       'repomd_url': 'http://pkg.loongnix.cn/loongnix-server/8.4/BaseOS/loongarch64/release/repodata/repomd.xml', # noqa
+                       'host_machine': '{gnu_architecture}-conda-loong20-linux-gnu',
+                       'host_subdir': 'linux-loongarch64',
+                       'fname_architecture': '{architecture}',
+                       'rpm_filename_platform': 'lns8.{architecture}',
+                       'checksummer': hashlib.sha256,
+                       'checksummer_name': "sha256",
+                       'macros': {'pyver': '3.8.6',
+                                  'gdk_pixbuf_base_version': '2.36.12'}},
             'suse_leap_rpi3': {'dirname': 'suse_leap_rpi3',
                                'short_name': 'slrpi3',
                                # I cannot locate the src.rpms for OpenSUSE leap. The existence

@@ -104,6 +104,7 @@ DEFAULT_SUBDIRS = {
     "linux-armv6l",
     "linux-armv7l",
     "linux-aarch64",
+    "linux-loongarch64",
     "win-64",
     "win-32",
     "win-arm64",
