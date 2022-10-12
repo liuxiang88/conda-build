@@ -631,7 +631,9 @@ def linux_vars(m, get_default, prefix):
     if build_arch.startswith('powerpc') or build_arch.startswith('aarch64') \
        or build_arch.startswith('s390x'):
         build_distro = 'cos7'
-    else:
+    else if build_arch.startswith('loongarch64'):
+        build_distro = 'loong20'
+    else
         build_distro = 'cos6'
     # There is also QEMU_SET_ENV, but that needs to be
     # filtered so it only contains the result of `linux_vars`
